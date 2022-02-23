@@ -1,18 +1,17 @@
+/* groovylint-disable CompileStatic */
 pipeline {
-    agent any 
+    agent any
         tools {
-            maven "3.6.3"
+            maven '3.6.3'
         }
         stages {
             stage('Clean and Install') {
                 steps {
                     bat 'mvn clean install'
-
-                }
+                     }
             }
             stage('pacakge') {
                 bat 'mvn pacakge'
             }
-
-        }
-    }
+             }
+}
