@@ -5,7 +5,7 @@ pipeline {
         maven '3.6.3'
     }
     stages {
-        stage('Clean and Install') {
+        stage ('Clean and Install') {
             steps {
                 bat 'mvn clean install'
             }
