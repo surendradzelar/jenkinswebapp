@@ -1,0 +1,19 @@
+/* groovylint-disable-next-line CompileStatic */
+pipeline {
+    agent any
+    tools {
+        maven '3.6.8'
+    }
+    stages {
+        stage('Clean and Install') {
+            steps {
+                bat 'mvn clean install'
+            }
+            stage('package') {
+                steps {
+                    bat 'mvn package'
+                }
+            }
+        }
+    }
+}
